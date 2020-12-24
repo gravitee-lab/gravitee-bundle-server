@@ -108,12 +108,12 @@ rm -fr ${UR_PROJECT_HOME}/pulumi/download.gravitee.io/.git/
 # generate the hugo static website
 rm -fr ${UR_PROJECT_HOME}/pulumi/hugo/download.gravitee.io
 mkdir -p ${UR_PROJECT_HOME}/pulumi/hugo/download.gravitee.io
-cp -fR ${UR_PROJECT_HOME}/pulumi/download.gravitee.io/* ${UR_PROJECT_HOME}/pulumi/download.gravitee.io/
+cp -fR ${UR_PROJECT_HOME}/pulumi/download.gravitee.io/* ${UR_PROJECT_HOME}/pulumi/hugo/download.gravitee.io/
 
 cd ${UR_PROJECT_HOME}/pulumi/hugo
 hugo
 # add the generated website in the [download.gravitee.io/] folder
-cp -fR ${UR_PROJECT_HOME}/pulumi/hugo/* ${UR_PROJECT_HOME}/pulumi/download.gravitee.io/
+cp -fR ${UR_PROJECT_HOME}/pulumi/hugo/public/* ${UR_PROJECT_HOME}/pulumi/download.gravitee.io/
 
 # and finally run the pulumi
 cd ${UR_PROJECT_HOME}/pulumi
