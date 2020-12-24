@@ -1,0 +1,9 @@
+config:
+  aws:profile: gio_infra
+  aws:region: eu-west-1
+    description: The AWS region to deploy into
+    default: eu-west-1
+  static-website:targetDomain: download.gravitee.io
+  static-website:pathToWebsiteContents: ./download.gravitee.io/
+  # [certificateArn] config param. is un-necessary since Certificate will be generated on the fly
+  # static-website:certificateArn: "arn:aws:acm:region:account:certificate/123456789012-1234-1234-1234-12345678"
